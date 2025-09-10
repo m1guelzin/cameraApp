@@ -3,6 +3,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import HomeScreen from "./src/homeScreen";
 import Cam from "./src/camera";
+import ListEvents from "./src/listEvents";
 
 const Stack = createStackNavigator();
 
@@ -12,6 +13,7 @@ export default function App() {
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Cam" component={Cam} options={{ title: "FOTO" }} />
+        <Stack.Screen name="Eventos" component={ListEvents} />
       </Stack.Navigator>
     </NavigationContainer>
   );
